@@ -15,7 +15,7 @@ html,body{
     overflow-y:auto;
     overflow-x: hidden;
     perspective: 10px; /*just to turn it on*/
-    
+    user-select: none;
 }
 
 .container{
@@ -27,7 +27,6 @@ html,body{
     align-items: center;
     transform-style: preserve-3d;
     z-index: -1;
-    
 }
 
 .background, .foreground{
@@ -36,7 +35,6 @@ html,body{
     width: 100%;
     object-fit: cover;
     z-index: -1;
-    
 }
 
 .background{
@@ -46,6 +44,7 @@ html,body{
 .foreground{
     transform: translateZ(-20px) scale(3); 
 }
+
 h1{
     position: absolute;
     font-family: 'Muli', sans-serif;
@@ -56,12 +55,13 @@ h1{
     /* font-weight: 700; */
     letter-spacing: 4px;
     color: #ffffffa7;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.428);
     
 }
 
 section{
-    background-color: rgb(45, 45, 45);
+    background-color: rgb(0, 0, 0);
     color: rgb(234, 230, 230);
     padding: 5rem 0px;
     font-family: sans-serif;
@@ -101,9 +101,14 @@ section{
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    border-radius: 30px;
+    /* border-radius: 30px; */
 }
-
+.bg-overlay{
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(black,rgba(0, 0, 0, 0.324),rgba(0, 0, 0, 0.061),rgba(0, 0, 0, 0.061),rgba(0, 0, 0, 0.324),black);
+}
 .bg1{
     background-image: url(img/sport-1.jpg);
 }
